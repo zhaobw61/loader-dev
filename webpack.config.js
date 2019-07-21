@@ -20,15 +20,29 @@ module.exports = {
         //  -! 不会让文件 在通过pre + normal loader来处理了。 let str = require('-!inline-loader!./a.js')
         // ！ 没有normal
         //  !! 什么都不要
-        rules:[ //loader顺序从右向左 从下到上
+
+        // rules:[ //loader顺序从右向左 从下到上
+        //     {
+        //         test:/\.js$/,
+        //         use:[]
+        //     }
+        //     // {
+        //     //     test:/\.js$/,
+        //     //     use:['loader3','loader2','loader1']
+        //     // }
+        // ]
+        rules:[
             {
-                test:/\.js$/,
-                use:[]
+                test:/.\js$/,
+                use:{
+                    loader:'babel-loader',
+                    options:{
+                        presets:[
+                            '@babel/preset-env'
+                        ]
+                    }
+                }
             }
-            // {
-            //     test:/\.js$/,
-            //     use:['loader3','loader2','loader1']
-            // }
         ]
     }
 }
