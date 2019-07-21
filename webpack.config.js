@@ -35,14 +35,24 @@ module.exports = {
             {
                 test:/.\js$/,
                 use:{
-                    loader:'babel-loader',
+                    loader:'banner-loader',
                     options:{
-                        presets:[
-                            '@babel/preset-env'
-                        ]
+                        text:'zzzzzzz',
+                        filename:path.resolve(__dirname,'banner.js')
                     }
                 }
             }
+            // {
+            //     test:/.\js$/,
+            //     use:{
+            //         loader:'babel-loader',
+            //         options:{
+            //             presets:[
+            //                 '@babel/preset-env'
+            //             ]
+            //         }
+            //     }
+            // }
         ]
     }
 }
