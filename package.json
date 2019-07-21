@@ -1,0 +1,24 @@
+{
+  "name": "loader-dev",
+  "version": "1.0.0",
+  "description": "编写和学习loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaobw61/loader-dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhaobw61/loader-dev/issues"
+  },
+  "homepage": "https://github.com/zhaobw61/loader-dev#readme",
+  "dependencies": {
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
