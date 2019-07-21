@@ -14,11 +14,21 @@ module.exports = {
         // }
     },
     module:{
-        rules:[
+        // loader的分类：pre在前面，post在后面 normal 正常执行
+        // loader的顺序：pre + normal + inline + post
+        // 行内的loader： let str = require('inline-loader!./a.js')
+        //  -! 不会让文件 在通过pre + normal loader来处理了。 let str = require('-!inline-loader!./a.js')
+        // ！ 没有normal
+        //  !! 什么都不要
+        rules:[ //loader顺序从右向左 从下到上
             {
                 test:/\.js$/,
-                use:'loader1'
+                use:[]
             }
+            // {
+            //     test:/\.js$/,
+            //     use:['loader3','loader2','loader1']
+            // }
         ]
     }
 }
