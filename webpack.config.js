@@ -33,6 +33,10 @@ module.exports = {
         // ]
         rules:[
             {
+                test:/\.jpg$/,
+                use:'file-loader'
+            },
+            {
                 test:/.\js$/,
                 use:{
                     loader:'banner-loader',
