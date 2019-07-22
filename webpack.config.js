@@ -33,6 +33,10 @@ module.exports = {
         // ]
         rules:[
             {
+                test:/\.less$/,
+                use:['style-loader','css-loader','less-loader']
+            },
+            {
                 test:/\.jpg$/,
                 use:'file-loader'
             },
